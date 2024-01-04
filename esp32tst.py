@@ -14,7 +14,7 @@ def adjust_brightness(image, factor=1.2):
 while True:
     imgResp = urllib.request.urlopen(url)
     imgNp = np.array(bytearray(imgResp.read()), dtype=np.uint8)
-    image = cv2.imdecode(imgNp, -1)
+    image = cv2.imdecode(imgNp, 1)
 
     # Adjust brightness
     image = adjust_brightness(image)
